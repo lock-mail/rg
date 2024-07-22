@@ -1,4 +1,9 @@
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
-echo $ip;
+
+$response = array("ip" => $ip);
+
+header('Content-Type: application/json');
+
+echo json_encode($response);
 ?>
